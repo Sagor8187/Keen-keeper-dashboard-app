@@ -27,8 +27,14 @@ const handlehistory = (information)=>{
     sethistory([...history,information])
 }
 
+// select value peak 
+
+const handleOnchange =(e)=>{
+    const values = e.target.value
+    console.log(values)
+}
   return (
-    <Mycontext.Provider value={{ data, setdata,handlehistory,history }}>
+    <Mycontext.Provider value={{ data, setdata,handlehistory,history ,handleOnchange}}>
       {loading ? <Loading></Loading> : children}
     </Mycontext.Provider>
   );

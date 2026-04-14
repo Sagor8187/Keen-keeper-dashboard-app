@@ -106,15 +106,15 @@ const currnet = today.toDateString()
 
         {/* Quick Actions */}
         <div className="grid grid-cols-3 gap-4">
-          <button onClick={()=>handlehistory({...info,caling:"audio",date:currnet})} className="bg-gray-100 p-4 rounded-xl shadow flex flex-col items-center gap-2">
+          <button onClick={()=>handlehistory({...info,calling:"audio",date:currnet})} className="bg-gray-100 p-4 rounded-xl shadow flex flex-col items-center gap-2">
             <FaPhoneAlt /> Call
           </button>
 
-          <button onClick={()=>handlehistory({...info,caling:"text",date:currnet})} className="bg-gray-100 p-4 rounded-xl shadow flex flex-col items-center gap-2">
+          <button onClick={()=>handlehistory({...info,calling:"text",date:currnet})} className="bg-gray-100 p-4 rounded-xl shadow flex flex-col items-center gap-2">
             <FaCommentDots /> Text
           </button>
 
-          <button onClick={()=>handlehistory({...info,caling:"video",date:currnet})} className="bg-gray-100 p-4 rounded-xl shadow flex flex-col items-center gap-2">
+          <button onClick={()=>handlehistory({...info,calling:"video",date:currnet})} className="bg-gray-100 p-4 rounded-xl shadow flex flex-col items-center gap-2">
             <FaVideo /> Video
           </button>
         </div>
