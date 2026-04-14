@@ -30,9 +30,9 @@ export default function Card() {
           </p>
 
           {/* Tag */}
-          <span className="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">
-            {person.tags[0]}
-          </span>
+          <div className='flex  justify-center gap-2' >
+            {person.tags.map(item=><p className="bg-green-200 text-green-800 px-3 py-1 rounded-full text-sm">{item}</p>)}
+          </div>
 
           {/* Status */}
           <div className="mt-4">

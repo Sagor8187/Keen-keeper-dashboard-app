@@ -5,7 +5,7 @@ export default function Box() {
     const {data}= useContext(Mycontext)
     
     const upcoming = data.filter(item=> item.status ==="upcoming")
-    const ok = data.filter(item=> item.status ==="ok")
+    const success = data.filter(item=> item.status ==="Success")
     const overdue = data.filter(item=> item.status ==="overdue") 
     
   return (
@@ -19,8 +19,8 @@ export default function Box() {
         <p>Upcoming</p>
       </div>
       <div className='shadow p-5 text-center'>
-        <h1  className='text-2xl font-bold'>{ok.length}</h1>
-        <p>Succes</p>
+        <h1  className='text-2xl font-bold'>{success.length}</h1>
+        <p>Success</p>
       </div>
       <div className='shadow p-5 text-center'>
         <h1  className='text-2xl font-bold'>{overdue.length}</h1>

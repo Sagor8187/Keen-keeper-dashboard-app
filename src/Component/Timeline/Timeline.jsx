@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Mycontext } from '../Context/Datacontext'
 
 export default function Timeline() {
+  const {history} = useContext(Mycontext)
+  
   return (
-    <div>Timeline</div>
+    <div>
+      <div>
+
+      </div>
+    </div>
   )
 }

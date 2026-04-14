@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 
 import Route from './Component/Route/Route'
 import { RouterProvider } from 'react-router'
@@ -12,7 +12,10 @@ export default function App() {
     <div>
       <Datacontext>
         <RouterProvider router={Route}>
-        <Layout></Layout>
+          <Suspense fallback={<p>sagor....</p>}>
+              <Layout></Layout>
+          </Suspense>
+        
 
       </RouterProvider>
       </Datacontext>
