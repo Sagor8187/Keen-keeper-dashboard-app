@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { FaPlus } from 'react-icons/fa6';
+import { Mycontext } from '../Context/Datacontext';
 export default function Banner() {
+    const {data} = useContext(Mycontext)
+    console.log(data)
   return (
     <div>
         <div className=" mt-20 bg-white flex flex-col items-center justify-center px-4 text-center">

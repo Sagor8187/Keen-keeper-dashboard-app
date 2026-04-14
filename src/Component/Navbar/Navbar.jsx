@@ -3,6 +3,7 @@ import logo from '../../assets/logo.png'
 import { IoHome } from "react-icons/io5";
 import { RiTimeLine } from "react-icons/ri";
 import { FcStatistics } from "react-icons/fc";
+import { Link } from 'react-router';
 export default function Navbar() {
   return (
     <div>
@@ -31,9 +32,9 @@ export default function Navbar() {
   </div>
   <div className="navbar-end hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-      <li><a><IoHome />Home</a></li>
-      <li><a href=""> <RiTimeLine />Timeline</a></li>
-      <li><a><FcStatistics />Stats</a></li>
+      <li><Link to="/"><IoHome />Home</Link></li>
+      <li><Link to="/timeline"> <RiTimeLine />Timeline</Link></li>
+      <li><Link to="/status"><FcStatistics />Stats</Link></li>
     </ul>
   </div>
   
