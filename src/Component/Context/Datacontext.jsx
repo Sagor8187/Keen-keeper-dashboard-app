@@ -2,6 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import React from "react";
 import Loading from "../Loading/Loading";
 
+
 export const Mycontext = createContext();
 export default function Datacontext({ children }) {
   const [data, setdata] = useState([]);
@@ -29,6 +30,7 @@ export default function Datacontext({ children }) {
 
 const handlehistory = (information)=>{
     sethistory([...history,information])
+
 }
 
 // select value peak 
