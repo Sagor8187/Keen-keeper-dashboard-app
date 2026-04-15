@@ -1,16 +1,121 @@
-# React + Vite
+# 📞 Call History Dashboard (React Project)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Project Overview
 
-Currently, two official plugins are available:
+This project is a **Call History Dashboard** built with **React.js**. It allows users to view, filter, and analyze different types of call activities such as **Audio, Video, and Text**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The app uses **React Context API** for global state management and provides a clean UI using **Tailwind CSS**.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+* 📋 View all call history (Audio, Video, Text)
+* 🔍 Filter calls by type
+* 📊 Visualize data using Pie Chart
+* 📅 Show current date and time
+* ⚡ Dynamic routing with React Router
+* ❌ Custom 404 Not Found Page
+* ⏳ Loading state using Suspense / Loader
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Technologies Used
+
+* ⚛️ React.js
+* 🌐 React Router
+* 🎨 Tailwind CSS
+* 📊 Recharts (for Pie Chart)
+* 🔄 Context API (State Management)
+* 🧠 JavaScript (ES6+)
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+│── components/
+│   ├── Navbar.jsx
+│   ├── Card.jsx
+│   ├── Status.jsx (Pie Chart)
+│   └── Loading.jsx
+│
+│── pages/
+│   ├── Home.jsx
+│   ├── Details.jsx
+│   └── NotFound.jsx
+│
+│── Context/
+│   └── Datacontext.jsx
+│
+│── App.jsx
+│── main.jsx
+```
+
+---
+
+## ⚙️ How It Works
+
+### 🔹 Context API
+
+* Global data (call history) is managed using `createContext`
+* Data is fetched from a local JSON file or API
+
+### 🔹 Filtering System
+
+* Users can filter calls by:
+
+  * Audio 📞
+  * Video 🎥
+  * Text 💬
+* Implemented using `filter()` method
+
+### 🔹 Pie Chart
+
+* Displays call distribution
+* Built using `Recharts`
+* Uses dynamic data from history
+
+---
+
+## 🧩 Key Concepts Used
+
+* useState & useEffect
+* useContext
+* Dynamic Routing (`useParams`)
+* Conditional Rendering
+* Array Methods (`map`, `filter`, `find`)
+* ES6+ Features
+
+---
+
+## 📸 UI Preview
+
+* Clean dashboard layout
+* Call cards with icons
+* Interactive filtering
+* Responsive design
+
+---
+
+## 🚧 Future Improvements
+
+* 🔐 Authentication system
+* 🌍 API integration (real data)
+* 📱 Mobile optimization
+* 📈 More analytics (bar chart, line chart)
+* 💾 Local storage / database support
+
+---
+
+## 📌 Author
+
+**Sagor Sutradhar**
+Full stack Developer (MERN)
+
+---
+
+## 📃 License
+
+This project is open-source and free to use.
