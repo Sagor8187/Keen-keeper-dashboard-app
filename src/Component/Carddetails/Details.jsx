@@ -4,12 +4,14 @@ import { Mycontext } from "../Context/Datacontext";
 import { FaPhoneAlt, FaCommentDots, FaVideo } from "react-icons/fa";
 import { BsClockHistory, BsArchive } from "react-icons/bs";
 import { MdDelete } from "react-icons/md";
+import Timeline from "../Timeline/Timeline";
 
 export default function Details() {
   const { data ,handlehistory} = useContext(Mycontext);
   const { id } = useParams();
 
   const info = data?.find((item) => item.id == id);
+
 
   
   if (!info) {
@@ -105,6 +107,10 @@ const currnet = today.toDateString()
         </div>
 
         {/* Quick Actions */}
+
+        <div>
+
+        
         <div className="grid grid-cols-3 gap-4">
           <button onClick={()=>handlehistory({...info,calling:"audio",date:currnet})} className="bg-gray-100 p-4 rounded-xl shadow flex flex-col items-center gap-2">
             <FaPhoneAlt /> Call
@@ -117,6 +123,11 @@ const currnet = today.toDateString()
           <button onClick={()=>handlehistory({...info,calling:"video",date:currnet})} className="bg-gray-100 p-4 rounded-xl shadow flex flex-col items-center gap-2">
             <FaVideo /> Video
           </button>
+        </div>
+
+        <div>
+          <Timeline></Timeline>
+        </div>
         </div>
       </div>
     </div>

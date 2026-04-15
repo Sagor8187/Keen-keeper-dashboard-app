@@ -26,8 +26,8 @@ console.log(filters)
       </div>
 
       <div>
-        {filters.map((item) => (
-          <div key={item.id} className="shadow rounded flex items-center gap-5 mx-10 p-6">
+        {filters.map((item,ind) => (
+          <div key={ind} className="shadow rounded flex items-center gap-5 mx-10 p-6">
             <div className="text-2xl">
               {item.calling === "audio" ? (
                 <FaPhoneAlt />

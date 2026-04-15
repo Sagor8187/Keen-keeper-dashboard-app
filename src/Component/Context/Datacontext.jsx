@@ -32,16 +32,17 @@ const handlehistory = (information)=>{
 }
 
 // select value peak 
+
+const [filters,setfilter] = useState([])
+
 useEffect(() => {
   setfilter(history);
 }, [history]);
-const [filters,setfilter] = useState([])
+
 const handleOnchange =(e)=>{
     const value = e.target.value
-   if (value === "all") {
-    setfilter(history);
-  } 
-  else if (value === "audio") {
+   
+   if (value === "audio") {
     const justaudio = history.filter(item => item.calling == "audio");
     setfilter(justaudio);
   } 
@@ -52,6 +53,8 @@ const handleOnchange =(e)=>{
   else if (value === "text") {
     const justtext = history.filter(item => item.calling == "text");
     setfilter(justtext);
+  }else {
+    setfilter(history);
   }
   
 }
