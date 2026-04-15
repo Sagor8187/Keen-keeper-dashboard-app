@@ -8,13 +8,14 @@ export default function Timeline() {
 console.log(filters)
   return (
   <div>
+      <h1 className="text-2xl font-bold mx-10 my-5">Timeline</h1>
   {filters.length === 0 ? (
-    <p className="font-bold text-2xl flex justify-center items-center h-screen mx-auto my-auto">
+    <p className="font-bold text-2xl flex justify-center items-center  mx-auto my-50">
       No History in Timeline
     </p>
   ) : (
     <div className="space-y-5">
-      <h1 className="text-2xl font-bold mx-10 my-5">Timeline</h1>
+    
 
       <div className="mx-10">
         <select defaultValue="all" onChange={handleOnchange} className="select">
