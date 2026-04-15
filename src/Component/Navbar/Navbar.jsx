@@ -3,7 +3,7 @@ import logo from '../../assets/logo.png'
 import { IoHome } from "react-icons/io5";
 import { RiTimeLine } from "react-icons/ri";
 import { FcStatistics } from "react-icons/fc";
-import { Link } from 'react-router';
+import { Link, NavLink } from 'react-router';
 export default function Navbar() {
   return (
     <div>
@@ -15,26 +15,20 @@ export default function Navbar() {
       </div>
       <ul
         tabIndex="-1"
-        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul className="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow ">
+         <li><NavLink className={({isActive})=> isActive?"bg-green-700 text-white":"text-black"} to="/"><IoHome />Home</NavLink></li>
+      <li><NavLink className={({isActive})=> isActive?"bg-green-700 text-white":"text-black"} to="/timeline"> <RiTimeLine />Timeline</NavLink></li>
+      <li><NavLink className={({isActive})=> isActive?"bg-green-700 text-white":"text-black"} to="/status"><FcStatistics />Stats</NavLink></li>
       </ul>
     </div>
     <img src={logo} alt="" />
    
   </div>
   <div className="navbar-end hidden lg:flex">
-    <ul className="menu menu-horizontal px-1">
-      <li><Link to="/"><IoHome />Home</Link></li>
-      <li><Link to="/timeline"> <RiTimeLine />Timeline</Link></li>
-      <li><Link to="/status"><FcStatistics />Stats</Link></li>
+    <ul className="menu menu-horizontal px-1 flex gap-2">
+      <li><NavLink className={({isActive})=> isActive?"bg-green-700 text-white":"text-black"} to="/"><IoHome />Home</NavLink></li>
+      <li><NavLink className={({isActive})=> isActive?"bg-green-700 text-white":"text-black"} to="/timeline"> <RiTimeLine />Timeline</NavLink></li>
+      <li><NavLink className={({isActive})=> isActive?"bg-green-700 text-white":"text-black"} to="/status"><FcStatistics />Stats</NavLink></li>
     </ul>
   </div>
   
